@@ -1,0 +1,30 @@
+docker build .                     - Crea un'immagine dal Dockerfile nella cartella attuale
+docker build -t nome:tag .        - Crea immagine con nome e tag personalizzato
+docker run nome                   - Avvia un container da un'immagine
+docker run -it nome               - Avvia container in modalità interattiva
+docker run -d nome                - Avvia container in background (detached)
+docker run --rm nome              - Avvia ed elimina il container dopo l'uso
+docker run -p 8080:80 nome        - Mappa la porta del container alla porta locale
+docker ps                         - Elenca i container in esecuzione
+docker ps -a                      - Elenca tutti i container (anche spenti)
+docker stop ID/nome               - Ferma un container
+docker start ID/nome              - Riavvia un container fermo
+docker restart ID/nome            - Riavvia un container
+docker rm ID/nome                 - Elimina un container
+docker rmi nome:tag               - Elimina un'immagine
+docker images                     - Elenca tutte le immagini
+docker exec -it nome bash         - Apre una shell dentro un container in esecuzione
+docker logs nome                  - Mostra i log del container
+docker cp file nome:/path         - Copia file locale nel container
+docker cp nome:/path file         - Copia file dal container al sistema host
+docker network ls                 - Elenca le reti Docker
+docker volume ls                  - Elenca i volumi Docker
+docker volume rm nome             - Elimina un volume
+docker system prune               - Pulisce risorse inutilizzate (container, immagini..)
+docker inspect nome               - Mostra dettagli completi del container
+docker stats                      - Mostra uso risorse live (CPU, RAM, etc.)
+docker login                      - Effettua login a DockerHub
+docker pull nome:tag              - Scarica un'immagine da DockerHub
+docker push nome:tag              - Carica un'immagine su DockerHub
+docker tag immagine nuovo_nome    - Rinomina/tagga un'immagine
+docker-compose up                 - Avvia i servizi definiti nel docker-compose.yml
